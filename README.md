@@ -1,32 +1,31 @@
 # Laravel Material Design
 
 ### Laravel Material Design is a Complete Build of Laravel 5.6 and Google Material Design Lite 1.3 with Email Registration Verification, Social Authentication, User Roles and Permissions, User Profiles, and Admin restricted user management system.
-[![Build Status](https://travis-ci.org/jeremykenedy/laravel-material-design.svg?branch=master)](https://travis-ci.org/jeremykenedy/laravel-material-design)
-[![StyleCI](https://github.styleci.io/repos/65395310/shield?branch=master)](https://github.styleci.io/repos/65395310)
-[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/jeremykenedy/laravel-material-design/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/jeremykenedy/laravel-material-design/?branch=master)
+
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 #### Table of contents
+
 - [About](#about)
 - [Features](#features)
 - [Installation Instructions](#installation-instructions)
-    - [Build the Front End Assets with Mix](#build-front-end-assets-with-mix)
-    - [Optionally Build Cache](#optionally-build-cache)
+  - [Build the Front End Assets with Mix](#build-front-end-assets-with-mix)
+  - [Optionally Build Cache](#optionally-build-cache)
 - [View the Project in Browser Using Artisan](#view-the-project-in-browser-using-artisan)
 - [Seeds](#seeds)
-    - [Seeded Roles](#seeded-roles)
-    - [Seeded Permissions](#seeded-permissions)
-    - [Seeded Users](#seeded-users)
+  - [Seeded Roles](#seeded-roles)
+  - [Seeded Permissions](#seeded-permissions)
+  - [Seeded Users](#seeded-users)
 - [Routes](#routes)
 - [Socialite](#socialite)
-    - [Get Socialite Login API Keys](#get-socialite-login-api-keys)
-    - [Add More Socialite Logins](#add-more-socialite-logins)
+  - [Get Socialite Login API Keys](#get-socialite-login-api-keys)
+  - [Add More Socialite Logins](#add-more-socialite-logins)
 - [Other API keys](#other-api-keys)
 - [Environment File](#environment-file)
 - [Helpful custom functions](#helpful-custom-functions)
-    - [Dialogs](#Dialogs)
-    - [Datatabes](#datatabes)
-    - [SnackBar-Toast](#snackbar-toast)
+  - [Dialogs](#Dialogs)
+  - [Datatabes](#datatabes)
+  - [SnackBar-Toast](#snackbar-toast)
 - [Screenshots](#screenshots)
 - [File Tree](#file-tree)
 - [Laravel References](#laravel-references)
@@ -34,61 +33,62 @@
 - [Laravel Material Design License](#laravel-material-design-license)
 
 ### About
+
 Laravel 5.6 with user authentication, registration with email confirmation, social media authentication, password recovery, and captcha protection. This makes full use of Controllers for the routes, templates for the views, and makes use of middleware for routing. Uses laravel ORM modeling and has CRUD (Create Read Update Delete) functionality for all tasks. Quick setup, can be done in 5 minutes. It will take longer to obtain your Facebook, Twitter, and Google Plus API Keys than it will to set this up.
 
 ### Features
-#### A [Laravel](http://laravel.com/) 5.6.x with [Material Design Lite](https://getmdl.io/) 1.3.0 project.
-| Laravel Material Design Features  |
-| :------------ |
-|Built on [Laravel](http://laravel.com/) 5.6|
-|Built on [Material Design Lite](https://getmdl.io/) 1.3.0|
-|Uses [MySQL](https://github.com/mysql) Database (can be changed) and include migrations and seeds|
-|Uses [Artisan](http://laravel.com/docs/5.6/artisan) to manage database migration, schema creations, and create/publish page controller templates|
-|Dependencies are managed with [COMPOSER](https://getcomposer.org/)|
-|Laravel Scaffolding **User** and **Administrator Authentication**|
-|Uses [Socialite Logins](https://github.com/laravel/socialite) ready to go - See API list used below|
-|[Google Maps API v3](https://developers.google.com/maps/documentation/javascript/) for User Location lookup and Geocoding|
-|CRUD (Create, Read, Update, Delete) Tasks Management|
-|CRUD (Create, Read, Update, Delete) User Management|
-|Eloquent user profiles|
-|Users can pick theme through dropdown or colorwheel|
-|Users can upload profile background images|
-|User Avatar Image AJAX Upload with [Dropzone.js](http://www.dropzonejs.com/#configuration)|
-|User Gravatar using [Gravatar API](https://github.com/creativeorange/gravatar)|
-|User Registration with email verification|
-|Google [reCaptcha Protection with Google API](https://developers.google.com/recaptcha/)|
-|Makes us of Laravel [Mix](https://laravel.com/docs/5.6/mix) to compile assets|
-|Makes use of [Language Localization Files](https://laravel.com/docs/5.6/localization)|
-|Active Nav states using [Laravel Requests](https://laravel.com/docs/5.6/requests)|
-|Restrict User Email Activation Attempts|
-|Capture IP to users table upon signup|
-|User uploads are in protected storage API|
-|Uses [Laravel Debugger](https://github.com/barryvdh/laravel-debugbar) for development|
-|User Password Reset via Email Token|
-|User Login with remember password|
-|User Delete with Goodby email|
-|User Restore Deleted Account|
-|User [Roles/ACL Implementation](https://github.com/jeremykenedy/laravel-roles)|
-|Configurable Email Notification via [Laravel-Exception-Notifier](https://github.com/jeremykenedy/laravel-exception-notifier)|
-|Makes of [Laravel's Soft Delete Structure](https://laravel.com/docs/5.6/eloquent#soft-deleting)|
-|Soft Deleted Users Management System|
-|Permanently Delete Soft Deleted Users|
-|User Delete Account with Goodbye email|
-|User Restore Deleted Account Token|
-|Restore Soft Deleted Users|
-|View Soft Deleted Users|
-|Captures Soft Delete Date|
-|Captures Soft Delete IP|
-|Admin Routing Details UI|
-|Admin PHP Information UI|
-|404 Page|
+
+#### A [Laravel](http://laravel.com/) 5.6.x with Material Design Lite 1.3.0 project.
+
+| Laravel Material Design Features                                                                                                                 |
+| :----------------------------------------------------------------------------------------------------------------------------------------------- |
+| Built on [Laravel](http://laravel.com/) 5.6                                                                                                      |
+| Built on Material Design Lite 1.3.0                                                                                                              |
+| Uses [MySQL](https://github.com/mysql) Database (can be changed) and include migrations and seeds                                                |
+| Uses [Artisan](http://laravel.com/docs/5.6/artisan) to manage database migration, schema creations, and create/publish page controller templates |
+| Dependencies are managed with [COMPOSER](https://getcomposer.org/)                                                                               |
+| Laravel Scaffolding **User** and **Administrator Authentication**                                                                                |
+| Uses [Socialite Logins](https://github.com/laravel/socialite) ready to go - See API list used below                                              |
+| [Google Maps API v3](https://developers.google.com/maps/documentation/javascript/) for User Location lookup and Geocoding                        |
+| CRUD (Create, Read, Update, Delete) Tasks Management                                                                                             |
+| CRUD (Create, Read, Update, Delete) User Management                                                                                              |
+| Eloquent user profiles                                                                                                                           |
+| Users can pick theme through dropdown or colorwheel                                                                                              |
+| Users can upload profile background images                                                                                                       |
+| User Avatar Image AJAX Upload with [Dropzone.js](http://www.dropzonejs.com/#configuration)                                                       |
+| User Gravatar using [Gravatar API](https://github.com/creativeorange/gravatar)                                                                   |
+| User Registration with email verification                                                                                                        |
+| Google [reCaptcha Protection with Google API](https://developers.google.com/recaptcha/)                                                          |
+| Makes us of Laravel [Mix](https://laravel.com/docs/5.6/mix) to compile assets                                                                    |
+| Makes use of [Language Localization Files](https://laravel.com/docs/5.6/localization)                                                            |
+| Active Nav states using [Laravel Requests](https://laravel.com/docs/5.6/requests)                                                                |
+| Restrict User Email Activation Attempts                                                                                                          |
+| Capture IP to users table upon signup                                                                                                            |
+| User uploads are in protected storage API                                                                                                        |
+| Uses [Laravel Debugger](https://github.com/barryvdh/laravel-debugbar) for development                                                            |
+| User Password Reset via Email Token                                                                                                              |
+| User Login with remember password                                                                                                                |
+| User Delete with Goodby email                                                                                                                    |
+| User Restore Deleted Account                                                                                                                     |
+| Soft Deleted Users Management System                                                                                                             |
+| Permanently Delete Soft Deleted Users                                                                                                            |
+| User Delete Account with Goodbye email                                                                                                           |
+| User Restore Deleted Account Token                                                                                                               |
+| Restore Soft Deleted Users                                                                                                                       |
+| View Soft Deleted Users                                                                                                                          |
+| Captures Soft Delete Date                                                                                                                        |
+| Captures Soft Delete IP                                                                                                                          |
+| Admin Routing Details UI                                                                                                                         |
+| Admin PHP Information UI                                                                                                                         |
+| 404 Page                                                                                                                                         |
 
 ### Installation Instructions
-1. Run `git clone https://github.com/jeremykenedy/laravel-material-design.git laravel-material-design`
+
+1. Run `git clone https://github.com/intelliseawolf/laravel-material.git`
 2. Create a MySQL database for the project
-    * ```mysql -u root -p```, if using Vagrant: ```mysql -u homestead -psecret```
-    * ```create database laravel_material;```
-    * ```\q```
+   - `mysql -u root -p`, if using Vagrant: `mysql -u homestead -psecret`
+   - `create database laravel_material;`
+   - `\q`
 3. From the projects root run `cp .env.example .env`
 4. Configure your `.env` file // NOTE: Google API Key will prevent maps error
 5. Run `composer install` from the projects root folder
@@ -101,42 +101,53 @@ Laravel 5.6 with user authentication, registration with email confirmation, soci
 12. Compile the front end assets with [npm steps](#using-npm) or [yarn steps](#using-yarn).
 
 #### Build the Front End Assets with Mix
+
 ##### Using NPM:
+
 1. From the projects root folder run `npm install`
 2. From the projects root folder run `npm run dev` or `npm run production`
-  * You can watch assets with `npm run watch`
+
+- You can watch assets with `npm run watch`
 
 ##### Using Yarn:
+
 1. From the projects root folder run `yarn install`
 2. From the projects root folder run `yarn run dev` or `yarn run production`
-  * You can watch assets with `yarn run watch`
+
+- You can watch assets with `yarn run watch`
 
 #### Optionally Build Cache
+
 1. From the projects root folder run `php artisan config:cache`
 
 ###### And thats it with the caveat of setting up and configuring your development environment. I recommend [Laravel Homestead](https://laravel.com/docs/5.6/homestead)
 
 #### View the Project in Browser Using Artisan
+
 1. From the projects root folder run `php artisan serve`
 2. Open your web browser and go to `http://localhost`
 
 ### Seeds
+
 ##### Seeded Roles
-  * Unverified - Level 0
-  * User  - Level 1
-  * Administrator - Level 5
+
+- Unverified - Level 0
+- User - Level 1
+- Administrator - Level 5
 
 ##### Seeded Permissions
-  * view.users
-  * create.users
-  * edit.users
-  * delete.users
+
+- view.users
+- create.users
+- edit.users
+- delete.users
 
 ##### Seeded Users
-|Email|Password|Access|
-|:------------|:------------|:------------|
-|user@user.com|password|User Access|
-|admin@admin.com|password|Admin Access|
+
+| Email           | Password | Access       |
+| :-------------- | :------- | :----------- |
+| user@user.com   | password | User Access  |
+| admin@admin.com | password | Admin Access |
 
 ### Routes
 
@@ -217,66 +228,80 @@ Laravel 5.6 with user authentication, registration with email confirmation, soci
 ```
 
 ### Socialite
+
 #### Get Socialite Login API Keys:
-* [Google Captcha API](https://www.google.com/recaptcha/admin#list)
-* [Facebook API](https://developers.facebook.com/)
-* [Twitter API](https://apps.twitter.com/)
-* [Google &plus; API](https://console.developers.google.com/)
-* [GitHub API](https://github.com/settings/applications/new)
-* [YouTube API](https://developers.google.com/youtube/v3/getting-started)
-* [Twitch TV API](http://www.twitch.tv/kraken/oauth2/clients/new)
-* [Instagram API](https://instagram.com/developer/register/)
-* [37 Signals API](https://github.com/basecamp/basecamp-classic-api)
+
+- [Google Captcha API](https://www.google.com/recaptcha/admin#list)
+- [Facebook API](https://developers.facebook.com/)
+- [Twitter API](https://apps.twitter.com/)
+- [Google &plus; API](https://console.developers.google.com/)
+- [GitHub API](https://github.com/settings/applications/new)
+- [YouTube API](https://developers.google.com/youtube/v3/getting-started)
+- [Twitch TV API](http://www.twitch.tv/kraken/oauth2/clients/new)
+- [Instagram API](https://instagram.com/developer/register/)
+- [37 Signals API](https://github.com/basecamp/basecamp-classic-api)
 
 #### Add More Socialite Logins
-* See full list of providers: [http://socialiteproviders.github.io](http://socialiteproviders.github.io/#providers)
+
+- See full list of providers: [http://socialiteproviders.github.io](http://socialiteproviders.github.io/#providers)
+
 ###### **Steps**:
-  1. Go to [http://socialiteproviders.github.io](http://socialiteproviders.github.io/providers/twitch/) and select the provider to be added.
-  2. From the projects root folder in terminal run composer command to get the needed package.
-     * Example:
 
-      ```
-         composer require socialiteproviders/twitch
-      ```
+1. Go to [http://socialiteproviders.github.io](http://socialiteproviders.github.io/providers/twitch/) and select the provider to be added.
+2. From the projects root folder in terminal run composer command to get the needed package.
 
-  3. From the projects root folder run ```composer update```
-  4. Add the service provider to ```/config/services.php```
-     * Example:
+   - Example:
+
+   ```
+      composer require socialiteproviders/twitch
+   ```
+
+3. From the projects root folder run `composer update`
+4. Add the service provider to `/config/services.php`
+
+   - Example:
+
+   ```
+      'twitch' => [
+          'client_id'   => env('TWITCH_KEY'),
+          'client_secret' => env('TWITCH_SECRET'),
+          'redirect'    => env('TWITCH_REDIRECT_URI'),
+      ],
+   ```
+
+5. Add the API credentials to `/.env `
+
+   - Example:
+
+   ```
+      TWITCH_KEY=YOURKEYHERE
+      TWITCH_SECRET=YOURSECRETHERE
+      TWITCH_REDIRECT_URI=http://YOURWEBSITEURL.COM/social/handle/twitch
+   ```
+
+6. Add the social media login link:
+
+   - Example:
+     In file `/resources/views/auth/login.blade.php` add ONE of the following:
+
+     - Conventional HTML:
 
      ```
-        'twitch' => [
-            'client_id'   => env('TWITCH_KEY'),
-            'client_secret' => env('TWITCH_SECRET'),
-            'redirect'    => env('TWITCH_REDIRECT_URI'),
-        ],
+     <a href="{{ route('social.redirect', ['provider' => 'twitch']) }}" class="btn btn-lg btn-primary btn-block twitch">Twitch</a>
      ```
 
-  5. Add the API credentials to ``` /.env  ```
-     * Example:
+     - Use Laravel HTML Facade with [Laravel Collective](https://laravelcollective.com/):
 
-      ```
-         TWITCH_KEY=YOURKEYHERE
-         TWITCH_SECRET=YOURSECRETHERE
-         TWITCH_REDIRECT_URI=http://YOURWEBSITEURL.COM/social/handle/twitch
-      ```
-
-  6. Add the social media login link:
-      * Example:
-      In file ```/resources/views/auth/login.blade.php``` add ONE of the following:
-         * Conventional HTML:
-        ```
-        <a href="{{ route('social.redirect', ['provider' => 'twitch']) }}" class="btn btn-lg btn-primary btn-block twitch">Twitch</a>
-        ```
-         * Use Laravel HTML Facade with [Laravel Collective](https://laravelcollective.com/):
-
-        ```
-        {!! HTML::link(route('social.redirect', ['provider' => 'twitch']), 'Twitch', array('class' => 'btn btn-lg btn-primary btn-block twitch')) !!}
-        ```
+     ```
+     {!! HTML::link(route('social.redirect', ['provider' => 'twitch']), 'Twitch', array('class' => 'btn btn-lg btn-primary btn-block twitch')) !!}
+     ```
 
 ### Other API keys
-* [Google Maps API v3 Key](https://developers.google.com/maps/documentation/javascript/get-api-key#get-an-api-key)
+
+- [Google Maps API v3 Key](https://developers.google.com/maps/documentation/javascript/get-api-key#get-an-api-key)
 
 ### Environment File
+
 Example `.env` file:
 
 ```bash
@@ -403,14 +428,16 @@ INSTAGRAM_REDIRECT_URI=http://laravel-authentication.local/social/handle/instagr
 ```
 
 ### Helpful custom functions
+
 #### Dialogs
+
 1. Call Material Design Lite Dialog Box
 
 ```
 mdl_dialog(trigger,close,dialog)
 ```
 
-* The inputs are optional, the Defaults are as follows:
+- The inputs are optional, the Defaults are as follows:
 
 ```
     var trigger = trigger || document.querySelector('.dialog-button');
@@ -424,107 +451,125 @@ mdl_dialog(trigger,close,dialog)
     @include('dialogs.dialog-save')
 ```
 
-* Substitute with the desired dialog blade.
+- Substitute with the desired dialog blade.
 
 3. Options
-    a. DELETE DIALOG OPTIONS
-    You can override the delete dialog title and save button text by passing your variables, otherwise the defaults will display.
+   a. DELETE DIALOG OPTIONS
+   You can override the delete dialog title and save button text by passing your variables, otherwise the defaults will display.
 
-    Example:
+   Example:
 
-    ```
-    @include('dialogs.dialog-delete', ['dialogTitle' => 'Confirm Task Deletion', 'dialogSaveBtnText' => 'Delete'])
-    ```
+   ```
+   @include('dialogs.dialog-delete', ['dialogTitle' => 'Confirm Task Deletion', 'dialogSaveBtnText' => 'Delete'])
+   ```
 
 #### Datatabes
+
 Give a table functionality with [DataTables](https://datatables.net)
 
-1. Within the ```@section('template_scripts')``` section call the view with:
+1. Within the `@section('template_scripts')` section call the view with:
 
 ```
 @include('scripts.mdl-datatables')
 ```
 
-2. Add class ```data-table``` to your ```<table>``` to instantiate it as a datatable.
-3 You should add classes ```mdl-data-table``` and ```mdl-js-data-table``` for MDL styling (not required).
-4. Optionally exclude/disable any column from being sortable by adding class ```no-sort``` to the ```<th>``` of the column.
-5. Optionally exclude/disable any column from being searchable by adding class ```no-search``` to the ```<th>``` of the column.
+2. Add class `data-table` to your `<table>` to instantiate it as a datatable.
+   3 You should add classes `mdl-data-table` and `mdl-js-data-table` for MDL styling (not required).
+3. Optionally exclude/disable any column from being sortable by adding class `no-sort` to the `<th>` of the column.
+4. Optionally exclude/disable any column from being searchable by adding class `no-search` to the `<th>` of the column.
 
 #### SnackBar-Toast
+
 Use Google Material Design Lite built in notificatons outlined below:
 
-1. Include ```@include('scripts.mdl-snackbar')``` call in the ```@section('template_scripts')``` section
-2. Include ```@include('partials.mdl-snackbar')``` in your template
+1. Include `@include('scripts.mdl-snackbar')` call in the `@section('template_scripts')` section
+2. Include `@include('partials.mdl-snackbar')` in your template
 3. Call Snackbar/Toast using JavaScript: EXAMPLES BELOW
 
-    1. Snackbar
-    ###### SNACKBAR ACTION(s)
-    ```
-    var someActions = function(event) {
-        document.querySelector('.mdl-snackbar-trigger').style.backgroundColor = 'red';
-    };
+   1. Snackbar
 
-    ```
+   ###### SNACKBAR ACTION(s)
 
-    ######  SNACKBAR CALL - WITH ACTION(s)
-    ```
-    mdl_snackbar({
-        msg: 'Profile Updated',
-        timout: 4000,                               // OPTIONAL
-        snackBarTrigger: '.mdl-snackbar-trigger',   // OPTIONAL
-        actionText: 'Undo',                         // OPTIONAL
-        actionHandler: someActions,                 // OPTIONAL
-    });
+   ```
+   var someActions = function(event) {
+       document.querySelector('.mdl-snackbar-trigger').style.backgroundColor = 'red';
+   };
 
-    ```
+   ```
 
-    2. Toast
-    ###### TOAST CALL - NO ACTION
-    ```
-    mdl_snackbar({
-        msg: 'Profile Updated',
-        timout: 4000,
-        snackBarTrigger: '.mdl-snackbar-trigger'
-    });
+   ###### SNACKBAR CALL - WITH ACTION(s)
 
-    ```
+   ```
+   mdl_snackbar({
+       msg: 'Profile Updated',
+       timout: 4000,                               // OPTIONAL
+       snackBarTrigger: '.mdl-snackbar-trigger',   // OPTIONAL
+       actionText: 'Undo',                         // OPTIONAL
+       actionHandler: someActions,                 // OPTIONAL
+   });
 
-    3. EXAMPLE CTA TO SnackBar/Toast
+   ```
 
-    ```
-    <button class="mdl-button mdl-js-button mdl-button--raised mdl-snackbar-trigger" type="button">Show Toast</button>
+   2. Toast
 
-    ```
+   ###### TOAST CALL - NO ACTION
+
+   ```
+   mdl_snackbar({
+       msg: 'Profile Updated',
+       timout: 4000,
+       snackBarTrigger: '.mdl-snackbar-trigger'
+   });
+
+   ```
+
+   3. EXAMPLE CTA TO SnackBar/Toast
+
+   ```
+   <button class="mdl-button mdl-js-button mdl-button--raised mdl-snackbar-trigger" type="button">Show Toast</button>
+
+   ```
 
 ### Screenshots
+
 ###### Login Desktop
+
 ![Login Screen](https://s3-us-west-2.amazonaws.com/laravel-material-design/screenshots/login-desktop.jpg "Laravel Material Design Login")
 
 ###### Login Mobile
+
 ![Login Screen](https://s3-us-west-2.amazonaws.com/laravel-material-design/screenshots/login-mobile.jpg "Laravel Material Design Login")
 
 ###### User Profile Menu
+
 ![User Profile Menu](https://s3-us-west-2.amazonaws.com/laravel-material-design/screenshots/user-menu-1.jpg "Laravel Material Design")
 
 ###### User Top Nav
+
 ![User Top Nav](https://s3-us-west-2.amazonaws.com/laravel-material-design/screenshots/user-nav.jpg "Laravel Material Design")
 
 ###### Mobile Drawer Nav
+
 ![Mobile Drawer Nav](https://s3-us-west-2.amazonaws.com/laravel-material-design/screenshots/mobile-nav-drawer.jpg "Laravel Material Design")
 
 ###### Admin View - User List Desktop
+
 ![Admin View - User List Desktop](https://s3-us-west-2.amazonaws.com/laravel-material-design/screenshots/user-list-desktop.jpg "Laravel Material Design")
 
 ###### Admin View - User List Mobile
+
 ![Admin View - User List Mobile](https://s3-us-west-2.amazonaws.com/laravel-material-design/screenshots/user-list-mobile.jpg "Laravel Material Design")
 
 ###### Alert Error Example
+
 ![Alert Error Example](https://s3-us-west-2.amazonaws.com/laravel-material-design/screenshots/alert-error.jpg "Laravel Material Design")
 
 ###### Alert Success Example
+
 ![Alert Success Example](https://s3-us-west-2.amazonaws.com/laravel-material-design/screenshots/alert-succes.jpg "Laravel Material Design")
 
 ### File Tree
+
 ```
 laravel-material-design/
 ├── .env.example
@@ -1229,34 +1274,38 @@ laravel-material-design/
 └── webpack.mix.js
 ```
 
-* Tree command can be installed using brew: `brew install tree`
-* File tree generated using command `tree -a -I '.git|node_modules|vendor|storage|tests'`
+- Tree command can be installed using brew: `brew install tree`
+- File tree generated using command `tree -a -I '.git|node_modules|vendor|storage|tests'`
 
 ### Laravel References
-* http://laravel.com/docs/5.6/authentication
-* http://laravel.com/docs/5.6/authorization
-* http://laravel.com/docs/5.6/routing
-* http://laravel.com/docs/5.6/schema
-* https://laravelcollective.com/docs/5.5/html
-* http://laravel.com/docs/5.6/authentication
-* http://laravel.com/docs/5.6/authorization
-* http://laravel.com/docs/5.6/routing
+
+- http://laravel.com/docs/5.6/authentication
+- http://laravel.com/docs/5.6/authorization
+- http://laravel.com/docs/5.6/routing
+- http://laravel.com/docs/5.6/schema
+- https://laravelcollective.com/docs/5.5/html
+- http://laravel.com/docs/5.6/authentication
+- http://laravel.com/docs/5.6/authorization
+- http://laravel.com/docs/5.6/routing
 
 ### Opening an Issue
+
 Before opening an issue there are a couple of considerations:
-* You are all awesome!
-* **Read the instructions** and make sure all steps were *followed correctly*.
-* **Check** that the issue is not *specific to your development environment* setup.
-* **Provide** *duplication steps*.
-* **Attempt to look into the issue**, and if you *have a solution, make a pull request*.
-* **Show that you have made an attempt** to *look into the issue*.
-* **Check** to see if the issue you are *reporting is a duplicate* of a previous reported issue.
-* **Following these instructions show me that you have tried.**
-* If you have a questions send me an email to jeremykenedy@gmail.com
-* Need some help, I can do my best on Slack: https://opensourcehelpgroup.slack.com
-* Please be considerate that this is an open source project that I provide to the community for FREE when opening an issue.
+
+- You are all awesome!
+- **Read the instructions** and make sure all steps were _followed correctly_.
+- **Check** that the issue is not _specific to your development environment_ setup.
+- **Provide** _duplication steps_.
+- **Attempt to look into the issue**, and if you _have a solution, make a pull request_.
+- **Show that you have made an attempt** to _look into the issue_.
+- **Check** to see if the issue you are _reporting is a duplicate_ of a previous reported issue.
+- **Following these instructions show me that you have tried.**
+- If you have a questions send me an email to intelliseawolf103@gmail.com
+- Need some help, I can do my best on Slack: https://opensourcehelpgroup.slack.com
+- Please be considerate that this is an open source project that I provide to the community for FREE when opening an issue.
 
 Open source projects are a the community’s responsibility to use, contribute, and debug.
 
 ### Laravel Material Design License
+
 Laravel-material-design is licensed under the [MIT license](https://opensource.org/licenses/MIT). Enjoy!
